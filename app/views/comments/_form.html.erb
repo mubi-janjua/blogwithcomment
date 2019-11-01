@@ -1,0 +1,7 @@
+<%= form_for ([@blog, @comment]) do |form| %>
+<%= form.label :comment %>
+<%= form.text_field :comment %>
+<%= form.hidden_field :user_id, value: current_user.id %>
+
+<%= form.submit %>
+<% end %>
